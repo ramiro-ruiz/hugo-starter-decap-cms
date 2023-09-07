@@ -1,11 +1,37 @@
 {{ partial "header.html" . }}
-
 <h1>{{ .Params.title }}</h1>
-
 <p>{{ .Params.blurb }}</p>
 
-<h2>{{ .Params.section.heading }}</h2>
+<section class="section">
+	<div class="container">
+        <img src="/imgs/slider-1.jpg">
+		<div class="text__container">
+			<h2 class="section__title">
+                {{ .Params.section1.heading }}
+			</h2>
+			<p class="section__info">
+                {{ .Params.section1.text }}
+			</p>
+		</div>
+	</div>
+</section>
 
-<p>{{ .Params.section.text }}</p>
+{{ if .Params.section2.heading }}
+
+<section class="section">
+	<div class="container">
+		<div class="text__container">
+			<h2 class="section__title">
+                {{ .Params.section2.heading }}
+			</h2>
+			<p class="section__info">
+                {{ .Params.section2.text }}
+			</p>
+		</div>
+	</div>
+</section>
+
+{{ end }}
+
 
 {{ partial "footer.html" . }}
