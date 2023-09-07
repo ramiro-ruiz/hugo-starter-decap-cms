@@ -9,10 +9,6 @@ collections:
   - name: "news" # Used in routes, e.g., /admin/collections/post
     label: "News" # Used in the UI
     folder: "content/news/" # The path to the folder where the documents are stored
-    files:
-      - file: "content/news/_index.md"
-        label: "News"
-        hide: true
     path: "{{slug}}/index"
     media_folder: "" # Save images in the post's own folder instead of the static folder
     public_folder: ""
