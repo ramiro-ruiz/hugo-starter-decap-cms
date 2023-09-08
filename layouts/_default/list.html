@@ -1,7 +1,9 @@
 {{ partial "header.html" . }}
 
 <h1>{{ .Title }}</h1>
-
+{{ if .Params.image }}
+	<img src="{{ .Params.image }}" >
+{{ end }}
 {{ .Content }}
 
 {{ range.Data.Pages }}
